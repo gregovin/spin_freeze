@@ -29,7 +29,7 @@ fn main()->io::Result<()>{
         println!("The wait will take {} cycles", c_info.cycle_count);
         println!("Leaving {} frames remaining", c_info.remaining_frames);
         let before = get_user_input("Will the remaining frames be placed before or after the read commands? ")?;
-        let before = before.to_lowercase().contains("b");
+        let before = before.to_lowercase().contains('b');
         if before {
             let mut time_active = time_active;
             let mut chapter_time = chapter_time;
