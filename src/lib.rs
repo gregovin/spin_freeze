@@ -42,7 +42,7 @@ pub fn freeze_comands(time_active: f32, chapter_time: usize, frames_before_freez
         target_ta-=DELTA_TIME;
     }
     let final_chapter_time = frames_to_wait+chapter_time;
-    format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {}\nSet, Session.Time, 170000*{}",
+    format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {:.5}\nSet, Session.Time, 170000*{}",
         frames_to_wait, target_ta,final_chapter_time)
 }
 /// Computes the largest number of cycles which can occur before freeze
@@ -91,7 +91,7 @@ pub fn get_cycle_wait_info(time_active: f32,cycle_length: usize,chapter_time: us
 }
 pub fn cycle_commands(time_active: f32,cycle_length: usize,chapter_time: usize,frames_before_freeze: usize)->(String,String){
     let info =get_cycle_wait_info(time_active,cycle_length,chapter_time,frames_before_freeze);
-    (format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {}\nSet, Session.Time, {}",
+    (format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {:.5}\nSet, Session.Time, {}",
         info.frames_elapsed, info.time_active,170000*info.final_chapter_time),
     format!("And you must wait an additional {}f",info.remaining_frames))
 }
