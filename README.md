@@ -1,5 +1,5 @@
 spin_freeze is a command line tool for computing when spinners will freeze and how
-To use it, you first must install spin_freeze. You can do so with cargo, or by installing the precompiled binaries and adding them to your path
+To use it, you first must install spin_freeze. You can do so with [cargo](https://crates.io/crates/spin_freeze), or by installing the precompiled binaries and adding them to your path
 
 Then, you simply run the spin_freeze command with either wait or cycle as an argument
 In wait mode you will be asked details relevant for assuming you spend the freeze doing no inputs
