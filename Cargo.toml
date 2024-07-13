@@ -1,6 +1,6 @@
 [package]
 name = "spin_freeze"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors= ["Gregory Hess"]
 description = "Calculate how long to wait for spinner freeze and generate spinner freeze commands"
