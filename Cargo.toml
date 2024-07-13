@@ -2,5 +2,11 @@
 name = "spin_freeze"
 version = "0.1.0"
 edition = "2021"
+authors= ["Gregory Hess"]
+description = "Calculate how long to wait for spinner freeze and generate spinner freeze commands"
+repository = "https://github.com/gregovin/spin_freeze"
+license = "MIT OR Apache-2.0"
+keywords = ["Celeste","Spinner","Freeze","TAS"]
+categories = ["command-line-utilities"]
 
 [dependencies]
