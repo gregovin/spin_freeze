@@ -42,8 +42,8 @@ pub fn freeze_comands(time_active: f32, chapter_time: usize, frames_before_freez
         target_ta-=DELTA_TIME;
     }
     let final_chapter_time = frames_to_wait+chapter_time;
-    format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {:.5}\nSet, Session.Time, 170000*{}",
-        frames_to_wait, target_ta,final_chapter_time)
+    format!("#console evalcs SavaData.Instance.AddTime((Monocle.Engine.Scene as Level).Session.Area, {}*170000l)\nSet, Level.TimeActive, {:.5}\nSet, Session.Time, {}",
+        frames_to_wait, target_ta,170000*final_chapter_time)
 }
 /// Computes the largest number of cycles which can occur before freeze
 /// Returns the number of cycles and the left over number of frames
